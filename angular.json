@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Vehicle-Mart"
+    }
+  },
+  "defaultProject": "Vehicle-Mart",
+  "cli": {
+    "analytics": "84825ffa-fc97-4767-b83d-28ac711c7f54"
+  }
 }
