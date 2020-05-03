@@ -1,0 +1,175 @@
+<div class="row">
+
+  <div class="example-header" style="margin-left: 50px;">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </div>
+
+  <div class="example-container mat-elevation-z8">
+
+    <mat-table [dataSource]="dataSource" matSort>
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+
+          <div class="col-sm border border border-danger ">
+            <div class="row card-body">
+              <img class="col-sm-6"
+                   src="assets\img\Vehicles\audi\1.8 TFSI Premium Plus 4dr Sedan (1.8L 4cyl Turbo 6AM)\images (1).jpg"
+                   alt="sans"/>
+              <div class="col-sm-6">
+                <h5 class="card-title">{{row.model}} </h5>
+                <p class="card-text">0Km</p>
+                <p class="card-text">Rs.11,450,000</p>
+<!--                <p>| {{row.model}} |  {{row.brand}}</p>-->
+                <a routerLink="/prePlusSedan" class="btn btn-primary">More Details</a>
+              </div>
+            </div>
+          </div>
+
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+
+
+</div>
+    <div class="row">
+      <div class="col-sm-8 border border-dark">
+                <div class="col-sm border border border-danger ">
+                  <div class="row card-body">
+                    <img class="col-sm-6" src="assets\img\Vehicles\audi\1.8 TFSI Premium Plus 4dr Sedan (1.8L 4cyl Turbo 6AM)\images (1).jpg" alt="sans"/>
+                    <div class="col-sm-6">
+                        <h5 class="card-title">Audi-1.8 TFSI Premium Plus 4dr Sedan (1.8L 4cyl Turbo 6AM)</h5>
+                        <p class="card-text">0Km</p>
+                        <p class="card-text">Rs.11,450,000</p>
+                        <a routerLink="/prePlusSedan" class="btn btn-primary">More Details</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm border border border-danger">
+                <div class="row card-body">
+               <img class="col-sm-6" src="assets\img\Vehicles\audi\2.0 TFSI Prestige quattro 4dr Sedan AWD (2.0L 4cyl Turbo 6AM)\img-.jpg" alt="sans"/>
+                  <div class="col-sm-6">
+                      <h5 class="card-title">Audi-2.0 TFSI Prestige quattro 4dr Sedan AWD (2.0L 4cyl Turbo 6AM)</h5>
+                      <p class="card-text">0Km</p>
+                      <p class="card-text">Rs.11,300,000</p>
+                      <a routerLink="/prestigeQattro4dr"class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-sm border border border-danger">
+                <div class="row card-body">
+                  <img class="col-sm-6" src="assets\img\Vehicles\audi\2.0T Premium Plus quattro 2dr Coupe AWD (2.0L 4cyl Turbo 6M)\images.jpg" alt="sans"/>
+                  <div class="col-sm-6">
+                      <h5 class="card-title">Audi-2.0T Premium Plus quattro 2dr Coupe AWD (2.0L 4cyl Turbo 6M)</h5>
+                      <p class="card-text">0Km</p>
+                      <p class="card-text">Rs.11,800,000</p>
+                      <a routerLink="/prePlusQuttro" class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm border border border-danger">
+              <div class="row card-body">
+                <img class="col-sm-6" src="assets\img\Vehicles\audi\2.0T Premium quattro 4dr Sedan AWD (2.0L 4cyl Turbo 8A)\25.jpg" alt="sans"/>
+                <div class="col-sm-6">
+                    <h5 class="card-title">Audi-2.0T Premium quattro 4dr Sedan AWD (2.0L 4cyl Turbo 8A)</h5>
+                    <p class="card-text">0Km</p>
+                    <p class="card-text">Rs.10,500,000</p>
+                    <a routerLink="/preqttroSedan"  class="btn btn-primary">More Details</a>
+                  </div>
+              </div>
+          </div>
+                    <div class="col-sm border border border-danger">
+                      <div class="row card-body">
+                        <img class="col-sm-6" src="assets\img\Vehicles\BMW\228i xDrive 2dr Convertible AWD (2.0L 4cyl Turbo 8A)\download (2).jpg" alt="sans"/>
+                        <div class="col-sm-6">
+                            <h5 class="card-title">BMW-228i xDrive 2dr Convertible AWD (2.0L 4cyl Turbo 8A)</h5>
+                            <p class="card-text">0Km</p>
+                            <p class="card-text">Rs.8,275,000</p>
+                            <a href="#" class="btn btn-primary">More Details</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm border border border-danger">
+                    <div class="row card-body">
+                      <img class="col-sm-6" src="assets\img\Vehicles\BMW\320i xDrive 4dr Sedan AWD (2.0L 4cyl Turbo 8A)\5.jpg" alt="sans"/>
+                      <div class="col-sm-6">
+                          <h5 class="card-title">BMW-320i xDrive 4dr Sedan AWD (2.0L 4cyl Turbo 8A</h5>
+                          <p class="card-text">0Km</p>
+                          <p class="card-text">Rs.7,800,000</p>
+                          <a href="#" class="btn btn-primary">More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm border border border-danger">
+                  <div class="row card-body">
+                    <img class="col-sm-6" src="assets\img\Vehicles\BMW\328i SULEV 4dr Sedan (2.0L 4cyl Turbo 8A)\images.jpg" alt="sans"/>
+                    <div class="col-sm-6">
+                        <h5 class="card-title">BMW-328i SULEV 4dr Sedan (2.0L 4cyl Turbo 8A)</h5>
+                        <p class="card-text">0Km</p>
+                        <p class="card-text">Rs.7,800,000</p>
+                        <a href="#" class="btn btn-primary">More Details</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm border border border-danger">
+                <div class="row card-body">
+                  <img class="col-sm-6" src="assets\img\Vehicles\BMW\M235i 2dr Coupe (3.0L 6cyl Turbo 8A)\download (1).jpg" alt="sans"/>
+                  <div class="col-sm-6">
+                      <h5 class="card-title">BMW-M235i 2dr Coupe (3.0L 6cyl Turbo 8A)</h5>
+                      <p class="card-text">0Km</p>
+                      <p class="card-text">Rs.8,275,000</p>
+                      <a href="#" class="btn btn-primary">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm border border border-danger">
+              <div class="row card-body">
+                <img class="col-sm-6" src="assets\img\Vehicles\BMW\M235i xDrive 2dr Coupe AWD (3.0L 6cyl Turbo 8A)\download (4).jpg" alt="sans"/>
+                <div class="col-sm-6">
+                    <h5 class="card-title">BMW-M235i xDrive 2dr Coupe AWD (3.0L 6cyl Turbo 8A)</h5>
+                    <p class="card-text">0Km</p>
+                    <p class="card-text">Rs.8,275,000</p>
+                    <a href="#" class="btn btn-primary">More Details</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm border border border-danger">
+            <div class="row card-body">
+              <img class="col-sm-6" src="assets\img\Vehicles\BMW\xDrive28i 4dr SUV AWD (2.0L 4cyl Turbo 8A)\img-1-600x263.jpg" alt="sans"/>
+              <div class="col-sm-6">
+                  <h5 class="card-title">BMW-Drive28i 4dr SUV AWD</h5>
+                  <p class="card-text">0Km</p>
+                  <p class="card-text">Rs.16,584,555</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+            </div>
+            </div>
+    </div>
+      <div class="col-sm-4  border border-dark">
+        <img class="d-block w-100" width="500" height="600" src="assets/img/fastfrs.jpg" alt="Second slide">
+    </div>
+    </div>
+
+
+  <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" routerLink="/vehicle2">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
