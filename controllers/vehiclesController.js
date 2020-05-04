@@ -14,12 +14,21 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req, res)=>{
     var nVehicles = new vehicles({
-        id: req.body.id,
-        model: req.body.model,
-        year: req.body.year,
-        company: req.body.company,
-        price: req.body.price,
-        engineCapacity: req.body.engineCapacity
+        id:{type: String}, 
+        model:{type: String},
+        year:{type: String},
+        company:{type: String,required:true},
+        price:{type: String},
+        engineCapacity:{type: String},
+        fuelType:{type: String},
+        transmission:{type: String},
+        age:{type: String},
+        mileage:{type: String},
+        priceOneYear:{type:String},
+        priceTwoYear:{type:String},
+        priceFiveYearOne:{type:String},
+        priceFiveYearTwo:{type:String},
+        priceFiveYearThree:{type:String}
 
     });
     nVehicles.save((err,doc)=>{
@@ -32,8 +41,8 @@ router.post('/',(req, res)=>{
     });
 });
 
-router.get('/:vehicleCompany',(req,res)=>{
-    vehicles.find({company: req.params.vehicleCompany})
+router.get('/:vehicleModel',(req,res)=>{
+    vehicles.findOne({model: req.params.vehicleModel})
     .exec()
     .then(function(doc){
         if (!doc) {
