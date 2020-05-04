@@ -19,7 +19,16 @@ router.post('/',(req, res)=>{;
         year: req.body.year,
         company: req.body.company,
         price: req.body.price,
-        engineCapacity: req.body.engineCapacity
+        engineCapacity: req.body.engineCapacity,
+        fuelType:req.body.fuelType,
+        transmission:req.body.transmission,
+        age:req.body.age,
+        mileage:req.body.mileage,
+        priceOneYear:req.body.priceOneYear,
+        priceTwoYear:req.body.priceTwoYear,
+        priceFiveYearOne:req.body.priceFiveYearOne,
+        priceFiveYearTwo:req.body.priceFiveYearTwo,
+        priceFiveYearThree:req.body.priceFiveYearThree
 
     });
     lVehicles.save((err,doc)=>{
@@ -34,8 +43,8 @@ router.post('/',(req, res)=>{;
 //router.post('/myphoto',upload.single('productImage'),(req,res)=>{
    // console.log(req.file);
 //});
-router.get('/:vehicleCompany',(req,res)=>{
-    latestVehicles.find({company: req.params.vehicleCompany})
+router.get('/:vehicleModel',(req,res)=>{
+    latestVehicles.findOne({model: req.params.vehicleModel})
     .exec()
     .then(function(doc){
         if (!doc) {
